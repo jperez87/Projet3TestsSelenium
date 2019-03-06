@@ -23,10 +23,10 @@ public class createCalendar {
 	@Before
 	public void openBrowser() {
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\formation\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\formation\\Desktop\\SUT\\chromedriver.exe");
 		driver = new ChromeDriver();
 		
-		 driver.get("http://localhost:8180/libreplan");
+		 driver.get("http://localhost:8080/libreplan");
 		
 		
 	}
