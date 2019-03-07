@@ -29,10 +29,10 @@ public class ProjectAndTaskTest {
 	@Before
 	public void openBrowser() {
 
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\formation\\Desktop\\SUT\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\formation\\chromedriver.exe");
 		driver = new ChromeDriver();
 
-		driver.get("http://localhost:8080/libreplan");
+		driver.get("http://localhost:8180/libreplan");
 
 
 	}
@@ -49,6 +49,8 @@ public class ProjectAndTaskTest {
 
 		loginPage l = PageFactory.initElements(driver, loginPage.class);
 
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		
 		homePage h = l.connexion("admin", "admin");
 
 		PopUpProjet pp = h.accesPopUpCreerNouveauProjet();
@@ -184,7 +186,12 @@ public class ProjectAndTaskTest {
 		
 		assertTrue("", lpp.menuVerticalDetailProjetAffiche.isDisplayed());
 		assertTrue("", lpp.projetTestCree.isDisplayed());
-
+		lpp.cliquerBoutonSuppressionProjet1();
+		assertTrue("", lpp.PopUpSuppressionProjet.isDisplayed());
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		lpp.cliquerOkPopUpSuppressionProjet();
+		assertTrue("", lpp.confirmationSuppressionProjet1.isDisplayed());
+		
 
 	}
 
