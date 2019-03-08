@@ -8,9 +8,14 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import grp1.autom1.libreplan.pageobject.ListeProjetsPage;
 import grp1.autom1.libreplan.pageobject.PlanificationProjetPage;
@@ -25,12 +30,26 @@ public class ProjectAndTaskTest {
 
 	WebDriver driver;
 
+	public String navig = System.getProperty("navigateur");
+	public String port = System.getProperty("port");
+
 
 	@Before
 	public void openBrowser() {
 
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\formation\\chromedriver.exe");
-		driver = new ChromeDriver();
+			
+			if (navig.equals("chrome")) {
+				System.setProperty("webdriver.chrome.driver", "C:\\Users\\formation\\chromedriver.exe");
+				driver = new ChromeDriver();
+			}
+			else if(navig.equals("firefox")) {
+				System.setProperty("webdriver.gecko.driver", "C:\\Users\\formation\\Desktop\\SUT\\geckodriver.exe");
+				driver = new FirefoxDriver();
+			}
+			
+
+	//	System.setProperty("webdriver.chrome.driver", "C:\\Users\\formation\\chromedriver.exe");
+	//  driver = new ChromeDriver();
 
 		driver.get("http://localhost:8080/libreplan");
 
@@ -55,7 +74,7 @@ public class ProjectAndTaskTest {
 
 		PopUpProjet pp = h.accesPopUpCreerNouveauProjet();
 
-		driver.manage().timeouts().implicitlyWait(900, TimeUnit.MILLISECONDS);
+		driver.manage().timeouts().implicitlyWait(1200, TimeUnit.MILLISECONDS);
 
 		//pp.fermerAvertissement();
 
@@ -105,6 +124,7 @@ public class ProjectAndTaskTest {
 
 
 		//Décocher la case "generer le code"
+		
 		pp.caseCode.click();
 
 
@@ -122,15 +142,15 @@ public class ProjectAndTaskTest {
 
 		pp.dateDebutField.clear();
 		pp.echeancheField.clear();
-
+		
 		pp.remplirLesChamps(nom, modele, code, dateDeDebut, echeance, client, calendrier);
 
 
 		ProjectDetails pageDetail = pp.validerProjet();
 
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-
-
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		WebElement boutonRetour = (new WebDriverWait(driver, 20)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div//img[@src='/libreplan/common/img/ico_back.png']")));
+		
 		assertTrue("Le menu affiché n'est pas 'Détail du projet'", pageDetail.menuVerticalDetailProjetAffiche.isDisplayed());
 		assertTrue("L'onglet affiché n'est pas 'WBS (tâches)'", pageDetail.ongletHorizontalWbsAffiche.isDisplayed());
 
@@ -156,6 +176,7 @@ public class ProjectAndTaskTest {
 
 
 		//annuler l'edition (2/4)
+		WebElement boutonRetoura = (new WebDriverWait(driver, 20)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div//img[@src='/libreplan/common/img/ico_back.png']")));
 		ProjectDetails pageDetail2 = popUp.annulerPopUp();
 
 		assertTrue("Le menu affiché n'est pas 'Détail du projet'", pageDetail2.menuVerticalDetailProjetAffiche.isDisplayed());
@@ -163,6 +184,7 @@ public class ProjectAndTaskTest {
 
 
 		//annuler l'edition (3/4)
+		WebElement boutonRetourb = (new WebDriverWait(driver, 20)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div//img[@src='/libreplan/common/img/ico_back.png']")));
 		PopUpConfirmerFenetreSortie popUp2 = pageDetail2.annulerEdition();	
 		assertTrue("La Pop Up n'est pas présente", popUp2.fenetrePopUp.isDisplayed());
 		assertTrue("Le bouton 'Annuler' n'est pas présent", popUp2.boutonAnnulerPopUp.isDisplayed());
@@ -171,7 +193,7 @@ public class ProjectAndTaskTest {
 
 		//annuler l'edition (4/4)
 		homePage pageDetail3 = popUp2.validerPopUp();
-
+		WebElement titrePlanifProjet = (new WebDriverWait(driver, 20)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div//span[contains(text(), 'Planification des projets')]")));
 		assertTrue("Le menu affiché n'est pas 'Détail du projet'", pageDetail3.pagePlanificationProjetActive.isDisplayed());
 		
 		//revoir la non présence de l'élément
@@ -183,7 +205,7 @@ public class ProjectAndTaskTest {
 		
 		
 		ListeProjetsPage lpp = pageDetail3.accesPageListeProjets();
-		
+		WebElement listeProjets = (new WebDriverWait(driver, 20)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div//span[contains(text(), 'Liste des projets')]")));
 		assertTrue("", lpp.menuVerticalDetailProjetAffiche.isDisplayed());
 		assertTrue("", lpp.projetTestCree.isDisplayed());
 		lpp.cliquerBoutonSuppressionProjet1();
