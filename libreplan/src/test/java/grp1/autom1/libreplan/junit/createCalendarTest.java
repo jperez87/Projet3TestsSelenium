@@ -19,7 +19,7 @@ import grp1.autom1.libreplan.pageobject.calendarListPage;
 import grp1.autom1.libreplan.pageobject.homePage;
 import grp1.autom1.libreplan.pageobject.loginPage;
 
-public class createCalendar {
+public class createCalendarTest {
 	
 
 
