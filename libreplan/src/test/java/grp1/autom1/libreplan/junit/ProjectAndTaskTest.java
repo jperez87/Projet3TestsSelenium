@@ -69,7 +69,7 @@ public class ProjectAndTaskTest {
 		loginPage l = PageFactory.initElements(driver, loginPage.class);
 
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		
+		WebElement accesApplication = (new WebDriverWait(driver, 40)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div//td[@class='identificacion'][2]")));
 		homePage h = l.connexion("admin", "admin");
 
 		WebElement accesCalendrier = (new WebDriverWait(driver, 20)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div/button[contains(text(), 'Calendrier')]")));

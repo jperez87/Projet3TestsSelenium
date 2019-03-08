@@ -62,7 +62,7 @@ public void closeBrowser() {
 	public void Navigation() throws InterruptedException {
 	
 		loginPage l = PageFactory.initElements(driver, loginPage.class);
-		WebElement accesApplication = (new WebDriverWait(driver, 20)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div//td[@class='identificacion'][2]")));
+		WebElement accesApplication = (new WebDriverWait(driver, 40)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div//td[@class='identificacion'][2]")));
 		homePage h = l.connexion("admin", "admin");
 	
 		WebElement accesCalendrier = (new WebDriverWait(driver, 20)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div/button[contains(text(), 'Calendrier')]")));
