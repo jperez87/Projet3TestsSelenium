@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+embeddedrepository="False"
+id="97e33486-03cf-4021-b690-e97278cfb86b"
+mode="Global"
+rxversion="8.3">
+	<name>
+		Recording2
+	</name>
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="Recording2"
+	namespace="Jeptstore">
+	</codegen>
+	<variables>
+	</variables>
+	<recorditems>
+	</recorditems>
+	<repository
+	id="fe23ad92-774c-484f-ba66-edb42898827a"
+	name="JeptstoreRepository"
+	relativepath="JeptstoreRepository.rxrep"
+	rxversion="8.3">
+		<codegen
+		classname="JeptstoreRepository"
+		namespace="Jeptstore">
+		</codegen>
+		<rootfolder
+		id="2fc383a7-6b5f-4486-99ae-42e6399cc818"
+		name="_rootdummy_">
+		</rootfolder>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		Recording2.UserCode.cs
+	</usercodefile>
+	<references>
+	</references>
+</recordtable>

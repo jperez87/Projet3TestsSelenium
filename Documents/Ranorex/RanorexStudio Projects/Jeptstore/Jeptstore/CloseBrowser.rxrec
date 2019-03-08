@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+rxversion="8.3"
+id="da40e405-d783-4b0f-a485-ccc8790d7acb"
+mode="Desktop">
+  <codegen classname="CloseBrowser" namespace="Jeptstore"/>
+  <name>
+      CloseBrowser
+  </name>
+  <recorditems>
+      <closeapprecorditem
+          enabled="True"
+          graceperiod="0ms"
+          method="CloseWindow"
+          optional="False">
+          <comment>
+          </comment>
+          <bindings>
+          </bindings>
+          <info id="22f7235c-7fa5-4e56-8c60-22ae479de4d5"
+                sourcename="RepositoryEditor">
+              <path>
+                  /form[@processname='chrome']
+              </path>
+          </info>
+      </closeapprecorditem>
+  </recorditems>
+  <repository name="JeptstoreRepository" rxversion="8.3" relativepath="JeptstoreRepository.rxrep">
+  </repository>
+</recordtable>

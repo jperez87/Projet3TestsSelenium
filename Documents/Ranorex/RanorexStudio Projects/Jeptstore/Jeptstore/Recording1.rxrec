@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+rxversion="8.3"
+id="b94c6243-256e-4939-a42e-e6a6f1df74d5"
+mode="Desktop">
+  <codegen classname="Recording1" namespace="Jeptstore"/>
+  <name>
+      Recording1
+  </name>
+  <recorditems/>
+  <repository name="JeptstoreRepository" rxversion="8.3" relativepath="JeptstoreRepository.rxrep">
+  </repository>
+</recordtable>

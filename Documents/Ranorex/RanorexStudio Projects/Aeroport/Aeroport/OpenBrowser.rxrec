@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+embeddedrepository="False"
+id="4a6ead63-2568-4b48-9906-1b9a2ec00d21"
+mode="Global"
+rxversion="8.3">
+	<name>
+		OpenBrowser
+	</name>
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="OpenBrowser"
+	namespace="Aeroport">
+	</codegen>
+	<variables>
+	</variables>
+	<recorditems>
+	</recorditems>
+	<repository
+	id="623cd6fd-5cf9-48e9-89f7-e2926d33287f"
+	name="AeroportRepository"
+	relativepath="AeroportRepository.rxrep"
+	rxversion="8.3">
+		<codegen
+		classname="AeroportRepository"
+		namespace="Aeroport">
+		</codegen>
+		<rootfolder
+		id="8eb8d1f5-80dc-4e50-aa02-93e041dd86c5"
+		name="_rootdummy_">
+		</rootfolder>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		OpenBrowser.UserCode.cs
+	</usercodefile>
+	<references>
+	</references>
+</recordtable>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<repository
+name="AeroportRepository"
+id="623cd6fd-5cf9-48e9-89f7-e2926d33287f"
+rxversion="8.3">
+  <codegen
+  classname="AeroportRepository"
+  namespace="Aeroport"/>
+  <rootfolder
+  name="Root"
+  id="8eb8d1f5-80dc-4e50-aa02-93e041dd86c5"
+  searchtimeout="30000ms"
+  capname="unknown"
+  isrooted="True"
+  usecache="True">
+    <basepath/>
+  </rootfolder>
+  <variables/>
+</repository>

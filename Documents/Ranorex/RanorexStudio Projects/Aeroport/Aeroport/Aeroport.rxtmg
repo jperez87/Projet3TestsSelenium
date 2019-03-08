@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modulegroupdoc
+rxversion="8.3">
+  <testsuiteentryhierarchy>
+    <flatlistofchildren>
+      <modulegroups
+      name="Aeroport"
+      id="68851d1b-1d72-40c2-9411-7d9816fe80ec"/>
+    </flatlistofchildren>
+    <childhierarchy>
+      <modulegroups
+      name="Aeroport"
+      id="68851d1b-1d72-40c2-9411-7d9816fe80ec"/>
+    </childhierarchy>
+  </testsuiteentryhierarchy>
+</modulegroupdoc>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+rxversion="8.3"
+id="7e46601f-f679-4047-bd28-ded5f1d6d1b8"
+mode="Desktop">
+  <codegen classname="CloseBrowser" namespace="Jpetstore"/>
+  <name>
+      CloseBrowser
+  </name>
+  <recorditems>
+      <closeapprecorditem
+          enabled="True"
+          graceperiod="0ms"
+          method="CloseWindow"
+          optional="False">
+          <comment>
+          </comment>
+          <bindings>
+          </bindings>
+          <info id="1df5485b-f809-4f4d-b1ea-e68707ad4eea"
+                sourcename="RepositoryEditor">
+              <path>
+                  /form[@processname='chrome']
+              </path>
+          </info>
+      </closeapprecorditem>
+  </recorditems>
+  <repository name="JpetstoreRepository" rxversion="8.3" relativepath="JpetstoreRepository.rxrep">
+  </repository>
+</recordtable>

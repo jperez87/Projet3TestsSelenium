@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+rxversion="8.3"
+id="550cff83-3875-461c-886d-702a892fdc18"
+mode="Desktop">
+  <codegen classname="OpenBrowser" namespace="MyTest"/>
+  <name>
+    OpenBrowser
+  </name>
+  <recorditems>
+    <openwebsiterecorditem
+        args=""
+        browser="chrome"
+        clearcache="False"
+        clearcookies="False"
+        enabled="True"
+        incognito="False"
+        instrument="True"
+        killexisting="False"
+        maximized="False"
+        optional="False">
+      <comment>
+      </comment>
+      <bindings>
+      </bindings>
+      <url>
+        http://localhost:8180/jpetstore
+      </url>
+    </openwebsiterecorditem>
+  </recorditems>
+  <repository name="MyTestRepository" rxversion="8.3" relativepath="MyTestRepository.rxrep">
+  </repository>
+</recordtable>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<testsuitedoc
+rxversion="8.3">
+    <testsuiteentryhierarchy>
+        <flatlistofchildren>
+            <testcase
+            name="TestCase"
+            id="aeb2c2d7-0a10-4952-918e-fa09db792276">
+            </testcase>
+            <testmodule
+            name="Recording1"
+            id="0b49f2c9-4a9e-4742-8e25-3cc9b38aaf3b"
+            ref="9e02ac4d-5eaa-4274-8f71-aaecf0042a23"
+            type="Recording"/>
+            <testcase
+            name="Aeroport France"
+            id="4f191772-820b-40fa-8522-e3d18c43b59f"
+            reportlevel="Info;20">
+            </testcase>
+            <testsuite
+            name="Aeroport France"
+            id="1222e4d7-83af-4ee4-bbc1-3b1c34175153"
+            reportfilename="%S_%Y%M%D_%T.rxlog"
+            reporttemplatefolder=""
+            placescreenshotsinfolder="True"
+            reportwriteinterval="30000ms"
+            reportcompress="False"
+            enabletracingscreenshots="True"
+            ReportTime="RelativeToTestSuiteStartTime"
+            TracingScreenshotMode="Foreground"
+            TracingScreenshotQuality="40"/>
+        </flatlistofchildren>
+        <childhierarchy>
+            <testsuite
+            name="Aeroport France"
+            id="1222e4d7-83af-4ee4-bbc1-3b1c34175153">
+                <testcase
+                name="Aeroport France"
+                id="4f191772-820b-40fa-8522-e3d18c43b59f">
+                    <testcase
+                    name="TestCase"
+                    id="aeb2c2d7-0a10-4952-918e-fa09db792276">
+                        <testmodule
+                        name="Recording1"
+                        id="0b49f2c9-4a9e-4742-8e25-3cc9b38aaf3b"/>
+                    </testcase>
+                </testcase>
+            </testsuite>
+        </childhierarchy>
+    </testsuiteentryhierarchy>
+    <datasources/>
+    <testconfigurations
+    default="TestRun">
+        <testconfiguration
+        name="TestRun">
+            <testcase
+            id="aeb2c2d7-0a10-4952-918e-fa09db792276"/>
+            <testcase
+            id="4f191772-820b-40fa-8522-e3d18c43b59f"/>
+        </testconfiguration>
+    </testconfigurations>
+    <references/>
+</testsuitedoc>

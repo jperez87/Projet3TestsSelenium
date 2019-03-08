@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+rxversion="8.3"
+id="9e02ac4d-5eaa-4274-8f71-aaecf0042a23">
+  <codegen classname="Recording1" namespace="Aeroport_France"/>
+  <name>
+    Recording1
+  </name>
+  <recorditems/>
+  <repository name="Aeroport FranceRepository" rxversion="8.3" relativepath="Aeroport FranceRepository.rxrep">
+  </repository>
+</recordtable>

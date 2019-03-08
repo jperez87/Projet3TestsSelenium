@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<repository
+name="Aeroport FranceRepository"
+id="2001801a-29b1-47c4-a73c-b49c5d5e19a9"
+rxversion="8.3">
+  <codegen
+  classname="Aeroport FranceRepository"
+  namespace="Aeroport_France"/>
+  <rootfolder
+  name="Root"
+  id="b21cf727-eac1-4bd1-90b0-476940d0002d"
+  searchtimeout="30000ms"
+  capname="unknown"
+  isrooted="True"
+  usecache="True">
+    <basepath/>
+  </rootfolder>
+  <variables/>
+</repository>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modulegroupdoc
+rxversion="8.3">
+  <testsuiteentryhierarchy>
+    <flatlistofchildren>
+      <modulegroups
+      name="Jeptstore"
+      id="9b43fd65-18e9-4f27-8c20-74cc3bbd2be0"/>
+    </flatlistofchildren>
+    <childhierarchy>
+      <modulegroups
+      name="Jeptstore"
+      id="9b43fd65-18e9-4f27-8c20-74cc3bbd2be0"/>
+    </childhierarchy>
+  </testsuiteentryhierarchy>
+</modulegroupdoc>

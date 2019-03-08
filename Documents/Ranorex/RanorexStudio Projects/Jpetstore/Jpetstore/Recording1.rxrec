@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+rxversion="8.3"
+id="e9c6f1ed-95fd-439b-a43d-df48deab8751"
+mode="Desktop">
+  <codegen classname="Recording1" namespace="Jpetstore"/>
+  <name>
+      Recording1
+  </name>
+  <recorditems/>
+  <repository name="JpetstoreRepository" rxversion="8.3" relativepath="JpetstoreRepository.rxrep">
+  </repository>
+</recordtable>
