@@ -39,7 +39,7 @@ public class createCalendarTest {
 				driver = new ChromeDriver();
 			}
 			else if(navig.equals("firefox")) {
-				System.setProperty("webdriver.gecko.driver", "C:\\Users\\formation\\Desktop\\SUT\\geckodriver.exe");
+				System.setProperty("webdriver.gecko.driver", "C:\\Users\\formation\\geckodriver.exe");
 				driver = new FirefoxDriver();
 			}
 			
