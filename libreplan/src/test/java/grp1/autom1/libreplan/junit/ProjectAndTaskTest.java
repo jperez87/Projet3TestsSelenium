@@ -72,6 +72,7 @@ public class ProjectAndTaskTest {
 		
 		homePage h = l.connexion("admin", "admin");
 
+		WebElement accesCalendrier = (new WebDriverWait(driver, 20)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div/button[contains(text(), 'Calendrier')]")));
 		PopUpProjet pp = h.accesPopUpCreerNouveauProjet();
 
 		driver.manage().timeouts().implicitlyWait(1200, TimeUnit.MILLISECONDS);
