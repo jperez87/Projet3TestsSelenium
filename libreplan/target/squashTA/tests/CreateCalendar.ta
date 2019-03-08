@@ -1,0 +1,6 @@
+
+SETUP :
+
+TEST :
+
+# EXECUTE_SELENIUM2 selenium WITH MAIN CLASS src.test.java.grp1.autom1.libreplan.junit.createCalendar AND COMPILE OPTIONS $(-encoding UTF-8)
