@@ -41,7 +41,8 @@ public class createCalendarTest {
 			
 			else if(navig.equals("IE")) {
 				System.setProperty("webdriver.ie.driver", "C:\\Users\\formation\\IEDriverServer.exe");
-				driver = new ChromeDriver();
+				driver = new IEDriver();
+			}
 				
 			else if(navig.equals("firefox")) {
 				System.setProperty("webdriver.gecko.driver", "C:\\Users\\formation\\Desktop\\SUT\\geckodriver.exe");
