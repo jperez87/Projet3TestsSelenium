@@ -45,7 +45,7 @@ public class ProjectAndTaskTest {
 			
 			else if(navig.equals("IE")) {
 				System.setProperty("webdriver.ie.driver", "C:\\Users\\formation\\IEDriverServer.exe");
-				driver = new IEDriver();
+				driver = new IEDriverServer();
 			}
 				
 			else if(navig.equals("firefox")) {
