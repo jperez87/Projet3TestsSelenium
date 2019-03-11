@@ -144,8 +144,8 @@ public class ProjectAndTaskTest {
 		String calendrier = pp.calendrier.getText();
 
 		//Entrees manuelle des dates
-		String dateDeDebut = "28 juil. 2018";
-		String echeance = "7 août 2018";
+		String dateDeDebut = "07 juil. 2018";
+		String echeance = "27 juil. 2018";
 		//------------------------------
 
 		pp.dateDebutField.clear();
