@@ -55,8 +55,8 @@ public class ProjectAndTaskTest {
 
 		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\formation\\chromedriver.exe");
 	 //  driver = new ChromeDriver();
-
-	//	driver.get("http://localhost:8080/libreplan");
+				
+				driver.get("http://localhost:8080/libreplan");
 
 
 	}
