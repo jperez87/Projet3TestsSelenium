@@ -34,18 +34,28 @@ public class createCalendarTest {
 	public void openBrowser() {
 
 			
-			if (navig.equals("chrome")) {
+		if (navig.equals("chrome")) {
 				System.setProperty("webdriver.chrome.driver", "C:\\Users\\formation\\chromedriver.exe");
 				driver = new ChromeDriver();
 			}
+			
+			else if(navig.equals("IE")) {
+				System.setProperty("webdriver.ie.driver", "C:\\Users\\formation\\IEDriverServer.exe");
+				driver = new ChromeDriver();
+				
 			else if(navig.equals("firefox")) {
-				System.setProperty("webdriver.gecko.driver", "C:\\Users\\formation\\geckodriver.exe");
+				System.setProperty("webdriver.gecko.driver", "C:\\Users\\formation\\Desktop\\SUT\\geckodriver.exe");
 				driver = new FirefoxDriver();
 			}
 			
 
-	//	System.setProperty("webdriver.chrome.driver", "C:\\Users\\formation\\chromedriver.exe");
-	//  driver = new ChromeDriver();
+		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\formation\\chromedriver.exe");
+	 //  driver = new ChromeDriver();
+
+	//	driver.get("http://localhost:8080/libreplan");
+
+
+	}
 
 		driver.get("http://localhost:8080/libreplan");
 
@@ -67,7 +77,7 @@ public void closeBrowser() {
 	
 		WebElement accesCalendrier = (new WebDriverWait(driver, 20)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div/button[contains(text(), 'Calendrier')]")));
 		calendarListPage c = h.accesAlaPageCalendrier();
-		WebElement creationCalendrier = (new WebDriverWait(driver, 20)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//td[contains(text(),'Créer')]")));
+		WebElement creationCalendrier = (new WebDriverWait(driver, 20)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//td[contains(text(),'CrÃ©er')]")));
 		c.creerUnCalendrier();
 
 		
