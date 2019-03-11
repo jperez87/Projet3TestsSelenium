@@ -38,20 +38,25 @@ public class ProjectAndTaskTest {
 	public void openBrowser() {
 
 			
-		//	if (navig.equals("chrome")) {
-		//		System.setProperty("webdriver.chrome.driver", "C:\\Users\\formation\\chromedriver.exe");
-		//		driver = new ChromeDriver();
-		//	}
-		//	else if(navig.equals("firefox")) {
-		//		System.setProperty("webdriver.gecko.driver", "C:\\Users\\formation\\Desktop\\SUT\\geckodriver.exe");
-		//		driver = new FirefoxDriver();
-		//	}
+			if (navig.equals("chrome")) {
+				System.setProperty("webdriver.chrome.driver", "C:\\Users\\formation\\chromedriver.exe");
+				driver = new ChromeDriver();
+			}
+			
+			else if(navig.equals("IE")) {
+				System.setProperty("webdriver.ie.driver", "C:\\Users\\formation\\IEDriverServer.exe");
+				driver = new ChromeDriver();
+				
+			else if(navig.equals("firefox")) {
+				System.setProperty("webdriver.gecko.driver", "C:\\Users\\formation\\Desktop\\SUT\\geckodriver.exe");
+				driver = new FirefoxDriver();
+			}
 			
 
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\formation\\chromedriver.exe");
-	    driver = new ChromeDriver();
+		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\formation\\chromedriver.exe");
+	 //  driver = new ChromeDriver();
 
-		driver.get("http://localhost:8080/libreplan");
+	//	driver.get("http://localhost:8080/libreplan");
 
 
 	}
@@ -79,52 +84,52 @@ public class ProjectAndTaskTest {
 
 		//pp.fermerAvertissement();
 
-		//prÈsence de la popup
-		assertTrue("La POP-UP n'est pas prÈsente", pp.headPopUp.isDisplayed());
+		//pr√©sence de la popup
+		assertTrue("La POP-UP n'est pas pr√©sente", pp.headPopUp.isDisplayed());
 
-		//prÈsence des elemenets de la pop-up et champs vides
-		assertTrue("L'ÈlÈment nom n'est pas prÈsent", pp.nom.isDisplayed());
-		assertTrue("Le champ Nom n'est pas prÈsent", pp.nomField.isDisplayed());
+		//pr√©sence des elemenets de la pop-up et champs vides
+		assertTrue("L'√©l√©ment nom n'est pas pr√©sent", pp.nom.isDisplayed());
+		assertTrue("Le champ Nom n'est pas pr√©sent", pp.nomField.isDisplayed());
 		Assert.assertEquals("Le champ Nom est vide","", pp.nomField.getText());
 
 
-		assertTrue("L'ÈlÈment modele n'est pas prÈsent", pp.modele.isDisplayed());
-		assertTrue("Le champ Nom n'est pas prÈsent", pp.modeleField.isDisplayed());
+		assertTrue("L'√©l√©ment modele n'est pas pr√©sent", pp.modele.isDisplayed());
+		assertTrue("Le champ Nom n'est pas pr√©sent", pp.modeleField.isDisplayed());
 		Assert.assertEquals("Le champ Nom est vide","", pp.modeleField.getText());
 
 
-		assertTrue("L'ÈlÈment code n'est pas prÈsent", pp.code.isDisplayed());
-		assertTrue("Le champ Nom n'est pas prÈsent", pp.codeField.isDisplayed());
+		assertTrue("L'√©l√©ment code n'est pas pr√©sent", pp.code.isDisplayed());
+		assertTrue("Le champ Nom n'est pas pr√©sent", pp.codeField.isDisplayed());
 		assertFalse("Le champ Nom n'est pas modifiable", pp.codeField.isEnabled());
-		//Valeur par dÈfaut ‡ dÈfinir
+		//Valeur par d√©faut √† d√©finir
 		//Assert.assertEquals("Le champ Nom est vide","ORDER0070", pp.codeField.getAttribute("value"));
 
 
-		assertTrue("L'ÈlÈment dateDebut n'est pas prÈsent", pp.dateDebut.isDisplayed());
-		assertTrue("Le champ dateDebut n'est pas prÈsent", pp.dateDebutField.isDisplayed());
+		assertTrue("L'√©l√©ment dateDebut n'est pas pr√©sent", pp.dateDebut.isDisplayed());
+		assertTrue("Le champ dateDebut n'est pas pr√©sent", pp.dateDebutField.isDisplayed());
 
 
-		assertTrue("L'ÈlÈment echeanche n'est pas prÈsent", pp.echeanche.isDisplayed());
-		assertTrue("Le champ echeanche n'est pas prÈsent", pp.echeancheField.isDisplayed());
+		assertTrue("L'√©l√©ment echeanche n'est pas pr√©sent", pp.echeanche.isDisplayed());
+		assertTrue("Le champ echeanche n'est pas pr√©sent", pp.echeancheField.isDisplayed());
 
 
-		assertTrue("L'ÈlÈment client n'est pas prÈsent", pp.client.isDisplayed());
-		assertTrue("Le champ client n'est pas prÈsent", pp.clientField.isDisplayed());
+		assertTrue("L'√©l√©ment client n'est pas pr√©sent", pp.client.isDisplayed());
+		assertTrue("Le champ client n'est pas pr√©sent", pp.clientField.isDisplayed());
 
 
-		assertTrue("L'ÈlÈment calendrier n'est pas prÈsent", pp.calendrier.isDisplayed());
-		assertTrue("Le champ calendrier n'est pas prÈsent", pp.calendrierField.isDisplayed());
+		assertTrue("L'√©l√©ment calendrier n'est pas pr√©sent", pp.calendrier.isDisplayed());
+		assertTrue("Le champ calendrier n'est pas pr√©sent", pp.calendrierField.isDisplayed());
 		Assert.assertEquals("La valeur par defaut n'est pas 'Default'", "Default", pp.calendrierField.getAttribute("value"));
 
 
-		assertTrue("Le bouton [Accepter] n'est pas prÈsent", pp.boutonAccepter.isDisplayed());
+		assertTrue("Le bouton [Accepter] n'est pas pr√©sent", pp.boutonAccepter.isDisplayed());
 
 
-		assertTrue("Le bouton [Annuler] n'est pas prÈsent", pp.boutonAnnuler.isDisplayed());
+		assertTrue("Le bouton [Annuler] n'est pas pr√©sent", pp.boutonAnnuler.isDisplayed());
 
 
 
-		//DÈcocher la case "generer le code"
+		//D√©cocher la case "generer le code"
 		
 		pp.caseCode.click();
 
@@ -138,7 +143,7 @@ public class ProjectAndTaskTest {
 
 		//Entrees manuelle des dates
 		String dateDeDebut = "28 juil. 2018";
-		String echeance = "7 ao˚t 2018";
+		String echeance = "7 ao√ªt 2018";
 		//------------------------------
 
 		pp.dateDebutField.clear();
@@ -152,57 +157,57 @@ public class ProjectAndTaskTest {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebElement boutonRetour = (new WebDriverWait(driver, 20)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div//img[@src='/libreplan/common/img/ico_back.png']")));
 		
-		assertTrue("Le menu affichÈ n'est pas 'DÈtail du projet'", pageDetail.menuVerticalDetailProjetAffiche.isDisplayed());
-		assertTrue("L'onglet affichÈ n'est pas 'WBS (t‚ches)'", pageDetail.ongletHorizontalWbsAffiche.isDisplayed());
+		assertTrue("Le menu affich√© n'est pas 'D√©tail du projet'", pageDetail.menuVerticalDetailProjetAffiche.isDisplayed());
+		assertTrue("L'onglet affich√© n'est pas 'WBS (t√¢ches)'", pageDetail.ongletHorizontalWbsAffiche.isDisplayed());
 
-		//PrÈsence des elements du menu vertival
-		assertTrue("L'icone 'Planification des projets' n'est pas prÈsent dans le menu Vertical", pageDetail.menuVerticalPlanificationprojetsPresent.isDisplayed());
-		//assertTrue("L'icone 'Chargement des Ressources' n'est pas prÈsent dans le menu Vertical", pageDetail.menuVerticalChargementRessourcesPresent.isDisplayed());
-		//assertTrue("L'icone 'Calendrier des Ressources En File' n'est pas prÈsent dans le menu Vertical", pageDetail.menuVerticalCalendrierRessourcesEnFilePresent.isDisplayed());
+		//Pr√©sence des elements du menu vertival
+		assertTrue("L'icone 'Planification des projets' n'est pas pr√©sent dans le menu Vertical", pageDetail.menuVerticalPlanificationprojetsPresent.isDisplayed());
+		//assertTrue("L'icone 'Chargement des Ressources' n'est pas pr√©sent dans le menu Vertical", pageDetail.menuVerticalChargementRessourcesPresent.isDisplayed());
+		//assertTrue("L'icone 'Calendrier des Ressources En File' n'est pas pr√©sent dans le menu Vertical", pageDetail.menuVerticalCalendrierRessourcesEnFilePresent.isDisplayed());
 
-		//PrÈsence des elements des onglets horizontaux
-		assertTrue("l'onglet  'Donnees Generales' n'est pas prÈsent", pageDetail.ongletDonneesGenerales.isDisplayed());
+		//Pr√©sence des elements des onglets horizontaux
+		assertTrue("l'onglet  'Donnees Generales' n'est pas pr√©sent", pageDetail.ongletDonneesGenerales.isDisplayed());
 
 
-		//PrÈsence eds bouton d'Èdition du projet
-		assertTrue("le bouton enregistrer n'est pas prÈsent", pageDetail.boutonEnregistrerProjet.isDisplayed());
-		assertTrue("le bouton annuler l'edition n'est pas prÈsent", pageDetail.boutonAnnulerEdition.isDisplayed());
+		//Pr√©sence eds bouton d'√©dition du projet
+		assertTrue("le bouton enregistrer n'est pas pr√©sent", pageDetail.boutonEnregistrerProjet.isDisplayed());
+		assertTrue("le bouton annuler l'edition n'est pas pr√©sent", pageDetail.boutonAnnulerEdition.isDisplayed());
 
 
 		//annuler l'edition (1/4)
 		PopUpConfirmerFenetreSortie popUp = pageDetail.annulerEdition();
-		assertTrue("La Pop Up n'est pas prÈsente", popUp.fenetrePopUp.isDisplayed());
-		assertTrue("Le bouton 'Annuler' n'est pas prÈsent", popUp.boutonAnnulerPopUp.isDisplayed());
-		assertTrue("Le bouton 'OK' n'est pas prÈsent", popUp.boutonOkPopUp.isDisplayed());
+		assertTrue("La Pop Up n'est pas pr√©sente", popUp.fenetrePopUp.isDisplayed());
+		assertTrue("Le bouton 'Annuler' n'est pas pr√©sent", popUp.boutonAnnulerPopUp.isDisplayed());
+		assertTrue("Le bouton 'OK' n'est pas pr√©sent", popUp.boutonOkPopUp.isDisplayed());
 
 
 		//annuler l'edition (2/4)
 		WebElement boutonRetoura = (new WebDriverWait(driver, 20)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div//img[@src='/libreplan/common/img/ico_back.png']")));
 		ProjectDetails pageDetail2 = popUp.annulerPopUp();
 
-		assertTrue("Le menu affichÈ n'est pas 'DÈtail du projet'", pageDetail2.menuVerticalDetailProjetAffiche.isDisplayed());
-		assertTrue("L'onglet affichÈ n'est pas 'WBS (t‚ches)'", pageDetail2.ongletHorizontalWbsAffiche.isDisplayed());
+		assertTrue("Le menu affich√© n'est pas 'D√©tail du projet'", pageDetail2.menuVerticalDetailProjetAffiche.isDisplayed());
+		assertTrue("L'onglet affich√© n'est pas 'WBS (t√¢ches)'", pageDetail2.ongletHorizontalWbsAffiche.isDisplayed());
 
 
 		//annuler l'edition (3/4)
 		WebElement boutonRetourb = (new WebDriverWait(driver, 20)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div//img[@src='/libreplan/common/img/ico_back.png']")));
 		PopUpConfirmerFenetreSortie popUp2 = pageDetail2.annulerEdition();	
-		assertTrue("La Pop Up n'est pas prÈsente", popUp2.fenetrePopUp.isDisplayed());
-		assertTrue("Le bouton 'Annuler' n'est pas prÈsent", popUp2.boutonAnnulerPopUp.isDisplayed());
-		assertTrue("Le bouton 'OK' n'est pas prÈsent", popUp2.boutonOkPopUp.isDisplayed());
+		assertTrue("La Pop Up n'est pas pr√©sente", popUp2.fenetrePopUp.isDisplayed());
+		assertTrue("Le bouton 'Annuler' n'est pas pr√©sent", popUp2.boutonAnnulerPopUp.isDisplayed());
+		assertTrue("Le bouton 'OK' n'est pas pr√©sent", popUp2.boutonOkPopUp.isDisplayed());
 
 
 		//annuler l'edition (4/4)
 		homePage pageDetail3 = popUp2.validerPopUp();
 		WebElement titrePlanifProjet = (new WebDriverWait(driver, 20)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div//span[contains(text(), 'Projects Planning')]")));
-		assertTrue("Le menu affichÈ n'est pas 'DÈtail du projet'", pageDetail3.pagePlanificationProjetActive.isDisplayed());
+		assertTrue("Le menu affich√© n'est pas 'D√©tail du projet'", pageDetail3.pagePlanificationProjetActive.isDisplayed());
 		
-		//revoir la non prÈsence de l'ÈlÈment
-		//assertFalse("L'onglet horizontal 'WBS (t‚ches) est affichÈ'", pageDetail3.ongletDonneesGenerales.isEnabled());
+		//revoir la non pr√©sence de l'√©l√©ment
+		//assertFalse("L'onglet horizontal 'WBS (t√¢ches) est affich√©'", pageDetail3.ongletDonneesGenerales.isEnabled());
 		
 		
 		
-		//VÈrification de la crÈation du projet
+		//V√©rification de la cr√©ation du projet
 		
 		
 		ListeProjetsPage lpp = pageDetail3.accesPageListeProjets();
